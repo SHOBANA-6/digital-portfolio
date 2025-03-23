@@ -52,13 +52,32 @@
                 <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
                   
                     <a href="https://shobana-6.github.io/digital-portfolio/Resume.pdf" target="_blank" download>
-                        <button>Download Resume</button>
+                        <button onclick="downloadAndOpen()">Download Resume</button>
                     </a>
                     
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        function downloadAndOpen() {
+            var pdfUrl = "https://shobana-6.github.io/digital-portfolio/Resume.pdf"; // Update with correct file URL
+
+    // Create a hidden <a> element for downloading
+            var a = document.createElement("a");
+            a.href = pdfUrl;
+            a.download = "Resume.pdf"; // Forces the file to download
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+    
+    // Open in a new tab after a short delay
+            setTimeout(function() {
+                window.open(pdfUrl, "_blank");
+            }, 1000); // Adjust delay if needed
+        }
+    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js">
 
 
