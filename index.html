@@ -63,21 +63,20 @@
     <script>
         function downloadAndOpen() {
             var pdfUrl = "https://shobana-6.github.io/digital-portfolio/Resume.pdf"; // Update with correct file URL
+            var newTab = window.open(pdfUrl. "_blank:);
 
     // Create a hidden <a> element for downloading
-            var a = document.createElement("a");
-            a.href = pdfUrl;
-            a.download = "Resume.pdf"; // Forces the file to download
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-    
-    // Open in a new tab after a short delay
-            setTimeout(function() {
-                window.open(pdfUrl, "_blank");
-            }, 1000); // Adjust delay if needed
+            setTimeout(function(){
+                var a = document.createElement("a");
+                a.href = pdfUrl;
+                a.download = "Resume.pdf";
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }, 2000);
         }
     </script>
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js">
 
 
